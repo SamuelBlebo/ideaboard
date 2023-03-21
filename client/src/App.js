@@ -1,9 +1,11 @@
 import "./App.css";
 
+import { ToolsMenu } from "./components/ToolsMenu";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <ToolsMenu />
     </div>
   );
 }
