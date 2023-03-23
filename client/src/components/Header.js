@@ -1,10 +1,11 @@
+import { useEffect } from "react";
 import "./Header.css";
 import { BsMoon } from "react-icons/bs";
 
-export function Header({ toggleMode }) {
-  const handleClick = () => {
-    toggleMode();
-  };
+export function Header({ toggleMode, mode }) {
+  useEffect(() => {
+    document.querySelector(".header").setAttribute("data-mode", mode);
+  }, [mode]);
 
   return (
     <div className="header">
@@ -13,7 +14,7 @@ export function Header({ toggleMode }) {
       </div>
       <div className="header-menu">
         <div className="icon">
-          <BsMoon onClick={handleClick} />
+          <BsMoon onClick={toggleMode} />
         </div>
       </div>
     </div>

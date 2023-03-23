@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 
 import { ToolsMenu } from "./components/ToolsMenu";
@@ -10,15 +10,10 @@ function App() {
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");
   };
-
-  useEffect(() => {
-    document.body.setAttribute("data-mode", mode);
-  }, [mode]);
-
   return (
     <div className="App">
-      <Header toggleMode={toggleMode} />
-      <ToolsMenu />
+      <Header toggleMode={toggleMode} mode={mode} />
+      <ToolsMenu mode={mode} />
     </div>
   );
 }
