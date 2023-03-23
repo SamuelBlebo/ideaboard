@@ -4,6 +4,7 @@
 }
 
 .header {
+  height: 50px;
   width: auto;
   padding: 0 20px;
   display: flex;
@@ -11,6 +12,9 @@
   background-color: var(--background-color);
   color: var(--text-color);
   align-items: center;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
 .header[data-mode="dark"] {
@@ -28,5 +32,5 @@
   border: 1.2px solid #edf0f2;
   border-radius: 5px;
   padding: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }

@@ -18,53 +18,77 @@ export function ToolsMenu({ mode }) {
   return (
     <div className="tools-menu">
       <div className="icon-box">
-        <GoNote />
+        <div className="icon">
+          <GoNote />
+        </div>
         <p>Note</p>
       </div>
       <div className="icon-box">
-        <AiOutlineLink />
+        <div className="icon">
+          <AiOutlineLink />
+        </div>
         <p>Link</p>
       </div>
       <div className="icon-box">
-        <MdOutlineChecklist />
+        <div className="icon">
+          <MdOutlineChecklist />
+        </div>
         <p>To Do</p>
       </div>
       <div className="icon-box">
-        <BsArrowUpRight />
+        <div className="icon">
+          <BsArrowUpRight />
+        </div>
         <p>Line</p>
       </div>
       <div className="icon-box">
-        <HiViewGridAdd />
+        <div className="icon">
+          <HiViewGridAdd />
+        </div>
         <p>Board</p>
       </div>
       <div className="icon-box">
-        <TbLayoutColumns />
+        <div className="icon">
+          <TbLayoutColumns />
+        </div>
         <p>Column</p>
       </div>
       <div className="icon-box">
-        <TfiCommentAlt />
+        <div className="icon">
+          <TfiCommentAlt />
+        </div>
         <p>Comment</p>
       </div>
       <div className="icon-box">
-        <BsThreeDots />
+        <div className="more">
+          <BsThreeDots />
+        </div>
       </div>
       <div>
         <hr />
       </div>
-      <div className="icon-box">
-        <BiImageAdd />
+      <div className="icon-box others">
+        <div className="icon">
+          <BiImageAdd />
+        </div>
         <p>add image</p>
       </div>
-      <div className="icon-box">
-        <AiOutlineFile />
+      <div className="icon-box others">
+        <div className="icon">
+          <AiOutlineFile />
+        </div>
         <p>Upload</p>
       </div>
-      <div className="icon-box">
-        <SlPencil />
+      <div className="icon-box others">
+        <div className="icon">
+          <SlPencil />
+        </div>
         <p>Draw</p>
       </div>
       <div className="icon-box trash">
-        <IoTrashBinOutline />
+        <div className="">
+          <IoTrashBinOutline />
+        </div>
         <p>Trash</p>
       </div>
     </div>
