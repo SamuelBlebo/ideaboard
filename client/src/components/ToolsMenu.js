@@ -15,78 +15,79 @@ export function ToolsMenu({ mode }) {
   useEffect(() => {
     document.body.className = mode;
   }, [mode]);
+
   return (
     <div className={`tools-menu ${mode}`}>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <GoNote />
         </div>
         <p>Note</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <AiOutlineLink />
         </div>
         <p>Link</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <MdOutlineChecklist />
         </div>
         <p>To Do</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <BsArrowUpRight />
         </div>
         <p>Line</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <HiViewGridAdd />
         </div>
         <p>Board</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <TbLayoutColumns />
         </div>
         <p>Column</p>
       </div>
       <div className="icon-box">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           <TfiCommentAlt />
         </div>
         <p>Comment</p>
       </div>
       <div className="icon-box">
-        <div className="more">
+        <div className={`more ${mode}`}>
           <BsThreeDots />
         </div>
       </div>
       <div>
         <hr />
       </div>
-      <div className="icon-box others">
-        <div className="icon">
+      <div className="icon-box ">
+        <div className={`icon others ${mode}`}>
           <BiImageAdd />
         </div>
         <p>add image</p>
       </div>
-      <div className="icon-box others">
-        <div className="icon">
+      <div className="icon-box ">
+        <div className={`icon others ${mode}`}>
           <AiOutlineFile />
         </div>
         <p>Upload</p>
       </div>
-      <div className="icon-box others">
-        <div className="icon">
+      <div className="icon-box">
+        <div className={`icon others ${mode}`}>
           <SlPencil />
         </div>
         <p>Draw</p>
       </div>
       <div className="icon-box trash">
-        <div className="">
+        <div className="icon">
           <IoTrashBinOutline />
         </div>
         <p>Trash</p>

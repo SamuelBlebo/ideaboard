@@ -4,7 +4,7 @@ import { ToolsMenu } from "./components/ToolsMenu";
 import { Header } from "./components/Header";
 
 function App() {
-  const [mode, setMode] = useState(localStorage.getItem("mode") || "light");
+  const [mode, setMode] = useState("light");
 
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");

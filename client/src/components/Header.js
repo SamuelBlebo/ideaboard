@@ -13,7 +13,7 @@ export function Header({ toggleMode, mode }) {
         <h5>IdeaBoard</h5>
       </div>
       <div className="header-menu">
-        <div className="icon">
+        <div className={`icon ${mode}`}>
           {mode === "light" ? (
             <BsMoon onClick={toggleMode} />
           ) : (
