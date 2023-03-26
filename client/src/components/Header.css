@@ -1,25 +1,13 @@
-:root {
-  --background-color: #fff; /* light mode background color */
-  --text-color: #333; /* light mode text color */
-}
-
 .header {
   height: 50px;
   width: auto;
   padding: 0 20px;
   display: flex;
   flex-direction: row;
-  background-color: var(--background-color);
-  color: var(--text-color);
   align-items: center;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
-}
-
-.header[data-mode="dark"] {
-  --background-color: #1a1b1e; /* dark mode background color */
-  --text-color: #fff; /* dark mode text color */
 }
 
 .header-menu {
@@ -29,8 +17,24 @@
 .header-menu .icon {
   display: flex;
   align-items: center;
-  border: 1.2px solid #edf0f2;
   border-radius: 5px;
   padding: 5px;
   font-size: 1rem;
+}
+
+.header-menu .icon:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  transform: translateX(2px);
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+  border: 1.2px solid #edf0f2;
+}
+
+.dark {
+  background-color: #1a1b1e;
+  color: #fff;
+  border: 1px solid #373a40;
 }
