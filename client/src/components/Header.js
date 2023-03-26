@@ -4,11 +4,11 @@ import { BsMoon, BsSun } from "react-icons/bs";
 
 export function Header({ toggleMode, mode }) {
   useEffect(() => {
-    document.querySelector(".header").setAttribute("data-mode", mode);
+    document.className = mode;
   }, [mode]);
 
   return (
-    <div className="header">
+    <div className={`header ${mode}`}>
       <div className="logo">
         <h5>IdeaBoard</h5>
       </div>

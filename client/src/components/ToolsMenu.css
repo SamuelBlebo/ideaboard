@@ -1,8 +1,3 @@
-:root {
-  --background-color: #ebedee; /* light mode background color */
-  --text-color: #333; /* light mode text color */
-  --border-right: 1px solid rgba(0, 0, 0, 0.3);
-}
 .tools-menu {
   width: 70px;
   height: 94vh;
@@ -12,15 +7,9 @@
   top: 50px;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border-right: var(--border-right);
-}
-
-.tools-menu[data-mode="dark"] {
-  --background-color: #1a1b1e; /* dark mode background color */
-  --text-color: #fff; /* dark mode text color */
-  --border-right: 2px solid #141517;
+  background-color: #fff;
+  color: #333;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .icon-box {
@@ -33,7 +22,7 @@
 .icon-box .icon {
   display: flex;
   align-items: center;
-  border: 1.2px solid #edf0f2;
+  border: 1px solid #edf0f2;
   border-radius: 5px;
   padding: 3.5px;
   font-size: 1.5rem;
@@ -62,4 +51,14 @@ div hr {
 .trash {
   margin-top: auto;
   margin-bottom: 15px;
+}
+
+.dark {
+  background-color: #1a1b1e;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
 }

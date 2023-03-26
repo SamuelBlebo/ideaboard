@@ -13,10 +13,10 @@ import "./ToolsMenu.css";
 
 export function ToolsMenu({ mode }) {
   useEffect(() => {
-    document.querySelector(".tools-menu").setAttribute("data-mode", mode);
+    document.body.className = mode;
   }, [mode]);
   return (
-    <div className="tools-menu">
+    <div className={`tools-menu ${mode}`}>
       <div className="icon-box">
         <div className="icon">
           <GoNote />

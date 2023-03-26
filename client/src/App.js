@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-
 import { ToolsMenu } from "./components/ToolsMenu";
 import { Header } from "./components/Header";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState(localStorage.getItem("mode") || "light");
 
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");
