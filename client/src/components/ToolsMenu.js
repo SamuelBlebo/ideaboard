@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { GoNote } from "react-icons/go";
 import { AiOutlineLink, AiOutlineFile } from "react-icons/ai";
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineChecklist } from "react-icons/md";
@@ -11,6 +10,9 @@ import { SlPencil } from "react-icons/sl";
 import { IoTrashBinOutline } from "react-icons/io5";
 import "./ToolsMenu.css";
 
+// Components
+import { Note } from "./Tools/Note";
+
 export function ToolsMenu({ mode }) {
   useEffect(() => {
     document.body.className = mode;
@@ -20,7 +22,7 @@ export function ToolsMenu({ mode }) {
     <div className={`tools-menu ${mode}`}>
       <div className="icon-box">
         <div className={`icon ${mode}`}>
-          <GoNote />
+          <Note />
         </div>
         <p>Note</p>
       </div>
