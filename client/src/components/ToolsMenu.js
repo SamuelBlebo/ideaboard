@@ -11,9 +11,9 @@ import { IoTrashBinOutline } from "react-icons/io5";
 import "./ToolsMenu.css";
 
 // Components
-import { Note } from "./Tools/Note";
+import { NoteButton } from "./Tools/NoteButton";
 
-export function ToolsMenu({ mode }) {
+export function ToolsMenu({ mode, handleNoteClick, showNoteField }) {
   useEffect(() => {
     document.body.className = mode;
   }, [mode]);
@@ -22,7 +22,7 @@ export function ToolsMenu({ mode }) {
     <div className={`tools-menu ${mode}`}>
       <div className="icon-box">
         <div className={`icon ${mode}`}>
-          <Note />
+          <NoteButton onClick={handleNoteClick} />
         </div>
         <p>Note</p>
       </div>
