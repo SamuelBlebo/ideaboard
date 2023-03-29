@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import "./NoteField.css";
+
 export function NoteField({ onNoteChange }) {
   const [noteText, setNoteText] = useState("");
 
@@ -9,8 +11,14 @@ export function NoteField({ onNoteChange }) {
   };
 
   return (
-    <div>
-      <textarea value={noteText} onChange={handleNoteChange} />
+    <div className={"note-field"}>
+      <div className={"items"}>
+        <textarea
+          value={noteText}
+          onChange={handleNoteChange}
+          placeHolder={"Start Typing ..."}
+        />
+      </div>
     </div>
   );
 }
