@@ -13,7 +13,7 @@ import "./ToolsMenu.css";
 // Components
 import { NoteButton } from "./Tools/NoteButton";
 
-export function ToolsMenu({ mode, handleNoteClick, showNoteField }) {
+export function ToolsMenu({ mode, showNoteField, handleNoteClick, onAddNote }) {
   useEffect(() => {
     document.body.className = mode;
   }, [mode]);
@@ -22,7 +22,7 @@ export function ToolsMenu({ mode, handleNoteClick, showNoteField }) {
     <div className={`tools-menu ${mode}`}>
       <div className="icon-box">
         <div className={`icon ${mode}`}>
-          <NoteButton onClick={handleNoteClick} />
+          <NoteButton onClick={onAddNote} />
         </div>
         <p>Note</p>
       </div>
