@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import "./App.css";
-
-// components
 import { ToolsMenu } from "./components/ToolsMenu";
 import { Header } from "./components/Header";
 import { NoteField } from "./components/Tools/NoteField";
+import "./App.css";
 
 function App() {
   const [mode, setMode] = useState("light");
   const [showNoteField, setShowNoteField] = useState(false);
   const [notes, setNotes] = useState([]);
-  const [noteText, setNoteText] = useState([""]);
 
   const toggleMode = () => {
     setMode(mode === "light" ? "dark" : "light");
@@ -20,26 +17,32 @@ function App() {
     setShowNoteField(!showNoteField);
   };
 
-  const handleNoteChange = (newNoteText) => {
-    setNoteText(newNoteText);
-  };
-
   const handleAddNote = () => {
-    setNotes([...notes, ""]); // add a new empty note to the notes array
+    setNotes([...notes, ""]);
   };
 
   return (
-    <div className="App">
+    <div
+      className="App "
+      style={{
+        width: "100vw",
+        height: "100vh",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
       <Header toggleMode={toggleMode} mode={mode} />
       <ToolsMenu
         mode={mode}
         showNoteField={showNoteField}
         handleNoteClick={handleNoteClick}
-        onAddNote={handleAddNote} // pass down the handleAddNote function
+        onAddNote={handleAddNote}
       />
+
       {notes.map((note, index) => (
-        <NoteField key={index} onNoteChange={handleNoteChange} />
+        <NoteField key={index} />
       ))}
+      {showNoteField && <NoteField />}
     </div>
   );
 }

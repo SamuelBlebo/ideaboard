@@ -12,15 +12,7 @@ export function NoteField({ onNoteChange }) {
   };
 
   return (
-    <Draggable
-      bounds={{
-        top: 0,
-        left: 0,
-
-        right: 1450,
-        bottom: 750,
-      }}
-    >
+    <Draggable bounds="parent">
       <div className={"note-field"}>
         <div className={"items"}>
           <textarea
