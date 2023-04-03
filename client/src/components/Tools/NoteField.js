@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Draggable from "react-draggable";
 
 import "./NoteField.css";
 
@@ -11,14 +12,24 @@ export function NoteField({ onNoteChange }) {
   };
 
   return (
-    <div className={"note-field"}>
-      <div className={"items"}>
-        <textarea
-          value={noteText}
-          onChange={handleNoteChange}
-          placeHolder={"Start Typing ..."}
-        />
+    <Draggable
+      bounds={{
+        top: 0,
+        left: 0,
+
+        right: 1450,
+        bottom: 750,
+      }}
+    >
+      <div className={"note-field"}>
+        <div className={"items"}>
+          <textarea
+            value={noteText}
+            onChange={handleNoteChange}
+            placeHolder={"Start Typing ..."}
+          />
+        </div>
       </div>
-    </div>
+    </Draggable>
   );
 }
