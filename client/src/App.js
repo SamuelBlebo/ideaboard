@@ -26,9 +26,10 @@ function App() {
       className="App "
       style={{
         width: "100vw",
-        height: "100vh",
+        height: "98vh",
         overflow: "hidden",
         position: "relative",
+        paddingTop: "30px",
       }}
     >
       <Header toggleMode={toggleMode} mode={mode} />

@@ -3,6 +3,8 @@
   width: 170px;
   border-radius: 10px 10px 0 0;
   color: #fff;
+  position: relative; /* make sure to set position to relative */
+  z-index: 999;
 }
 
 textarea {

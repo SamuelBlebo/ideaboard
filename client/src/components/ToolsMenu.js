@@ -5,9 +5,8 @@ import { MdOutlineChecklist } from "react-icons/md";
 import { BsArrowUpRight, BsThreeDots } from "react-icons/bs";
 import { TbLayoutColumns } from "react-icons/tb";
 import { TfiCommentAlt } from "react-icons/tfi";
-import { BiImageAdd } from "react-icons/bi";
+import { BiImageAdd, BiUserCircle } from "react-icons/bi";
 import { SlPencil } from "react-icons/sl";
-import { IoTrashBinOutline } from "react-icons/io5";
 import "./ToolsMenu.css";
 
 // Components
@@ -90,9 +89,9 @@ export function ToolsMenu({ mode, showNoteField, handleNoteClick, onAddNote }) {
       </div>
       <div className="icon-box trash">
         <div className="icon">
-          <IoTrashBinOutline />
+          <BiUserCircle />
         </div>
-        <p>Trash</p>
+        <p>Account</p>
       </div>
     </div>
   );
