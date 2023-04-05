@@ -10,7 +10,7 @@ import { SlPencil } from "react-icons/sl";
 import "./ToolsMenu.css";
 
 // Components
-import { NoteButton } from "./Tools/NoteButton";
+import { NoteButton } from "./Tools/noteField/NoteButton";
 
 export function ToolsMenu({ mode, showNoteField, handleNoteClick, onAddNote }) {
   useEffect(() => {

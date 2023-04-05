@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ToolsMenu } from "./components/ToolsMenu";
 import { Header } from "./components/Header";
-import { NoteField } from "./components/Tools/NoteField";
+import { NoteField } from "./components/Tools/NoteField/NoteField";
 import "./App.css";
 
 function App() {
