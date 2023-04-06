@@ -1,0 +1,16 @@
+.link-field {
+  margin: 40px 0 0 120px;
+  width: 170px;
+  border-radius: 10px 10px 0 0;
+  position: relative; /* make sure to set position to relative */
+  z-index: 999;
+}
+
+.link-preview {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}

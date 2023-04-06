@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { AiOutlineLink, AiOutlineFile } from "react-icons/ai";
+import { AiOutlineFile } from "react-icons/ai";
 import { HiViewGridAdd } from "react-icons/hi";
 import { MdOutlineChecklist } from "react-icons/md";
 import { BsArrowUpRight, BsThreeDots } from "react-icons/bs";
@@ -11,6 +11,7 @@ import "./ToolsMenu.css";
 
 // Components
 import { NoteButton } from "./Tools/noteField/NoteButton";
+import { LinkButton } from "./Tools/linkField/LinkButton";
 
 export function ToolsMenu({ mode, showNoteField, handleNoteClick, onAddNote }) {
   useEffect(() => {
@@ -27,7 +28,7 @@ export function ToolsMenu({ mode, showNoteField, handleNoteClick, onAddNote }) {
       </div>
       <div className="icon-box">
         <div className={`icon ${mode}`}>
-          <AiOutlineLink />
+          <LinkButton />
         </div>
         <p>Link</p>
       </div>
